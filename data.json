@@ -1,0 +1,288 @@
+{
+  "took": 8,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 4,
+    "max_score": 0.2876821,
+    "hits": [
+      {
+        "_index": "wazuh-alerts-4.x-2022.07.17",
+        "_type": "_doc",
+        "_id": "PkZADIIBmMmhYMUFpMqj",
+        "_score": 0.2876821,
+        "_source": {
+          "agent": {
+            "ip": "192.168.100.16",
+            "name": "sherry-dell",
+            "id": "001"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "audit": {
+              "syscall": "58",
+              "auid": "1000",
+              "gid": "0",
+              "euid": "0",
+              "fsgid": "0",
+              "session": "3",
+              "pid": "29918",
+              "suid": "0",
+              "type": "SYSCALL",
+              "command": "collect2",
+              "ppid": "29915",
+              "fsuid": "0",
+              "exit": "29919",
+              "uid": "0",
+              "egid": "0",
+              "exe": "/usr/lib/gcc/x86_64",
+              "success": "yes",
+              "tty": "pts1",
+              "sgid": "0",
+              "id": "1432",
+              "arch": "c000003e",
+              "key": "audit-wazuh-vfork"
+            }
+          },
+          "rule": {
+            "firedtimes": 4,
+            "mail": false,
+            "level": 3,
+            "description": "Audit: Command: /usr/lib/gcc/x86_64.",
+            "groups": [
+              "audit",
+              "audit_command"
+            ],
+            "id": "80792",
+            "gdpr": [
+              "IV_30.1.g"
+            ]
+          },
+          "decoder": {
+            "parent": "auditd",
+            "name": "auditd"
+          },
+          "full_log": "type=SYSCALL msg=audit(1658062935.256:1432): arch=c000003e syscall=58 success=yes exit=29919 a0=44e393 a1=2 a2=0 a3=3 items=0 ppid=29915 pid=29918 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=3 comm=\"collect2\" exe=\"/usr/lib/gcc/x86_64-linux-gnu/7/collect2\" key=\"audit-wazuh-vfork\" type=PROCTITLE msg=audit(1658062935.256:1432): proctitle=2F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F636F6C6C65637432002D706C7567696E002F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F6C69626C746F5F706C7567696E2E736F002D706C7567696E2D6F70743D2F7573722F6C69622F6763632F7838365F36",
+          "input": {
+            "type": "log"
+          },
+          "@timestamp": "2022-07-17T13:02:16.582Z",
+          "location": "/var/log/audit/audit.log",
+          "id": "1658062936.18328",
+          "timestamp": "2022-07-17T13:02:16.582+0000"
+        }
+      },
+      {
+        "_index": "wazuh-alerts-4.x-2022.07.17",
+        "_type": "_doc",
+        "_id": "O0ZADIIBmMmhYMUFpMqj",
+        "_score": 0.2876821,
+        "_source": {
+          "agent": {
+            "ip": "192.168.100.16",
+            "name": "sherry-dell",
+            "id": "001"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "audit": {
+              "syscall": "58",
+              "auid": "1000",
+              "gid": "0",
+              "euid": "0",
+              "fsgid": "0",
+              "session": "3",
+              "pid": "29915",
+              "suid": "0",
+              "type": "SYSCALL",
+              "command": "gcc",
+              "ppid": "2464",
+              "fsuid": "0",
+              "exit": "29916",
+              "uid": "0",
+              "egid": "0",
+              "exe": "/usr/bin/x86_64",
+              "success": "yes",
+              "tty": "pts1",
+              "sgid": "0",
+              "id": "1429",
+              "arch": "c000003e",
+              "key": "audit-wazuh-vfork"
+            }
+          },
+          "rule": {
+            "firedtimes": 1,
+            "mail": false,
+            "level": 3,
+            "description": "Audit: Command: /usr/bin/x86_64.",
+            "groups": [
+              "audit",
+              "audit_command"
+            ],
+            "id": "80792",
+            "gdpr": [
+              "IV_30.1.g"
+            ]
+          },
+          "decoder": {
+            "parent": "auditd",
+            "name": "auditd"
+          },
+          "full_log": "type=SYSCALL msg=audit(1658062935.072:1429): arch=c000003e syscall=58 success=yes exit=29916 a0=467563 a1=0 a2=0 a3=3 items=0 ppid=2464 pid=29915 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=3 comm=\"gcc\" exe=\"/usr/bin/x86_64-linux-gnu-gcc-7\" key=\"audit-wazuh-vfork\" type=PROCTITLE msg=audit(1658062935.072:1429): proctitle=67636300666F726B2E63002D6F00666F726B",
+          "input": {
+            "type": "log"
+          },
+          "@timestamp": "2022-07-17T13:02:16.541Z",
+          "location": "/var/log/audit/audit.log",
+          "id": "1658062936.15415",
+          "timestamp": "2022-07-17T13:02:16.541+0000"
+        }
+      },
+      {
+        "_index": "wazuh-alerts-4.x-2022.07.17",
+        "_type": "_doc",
+        "_id": "PEZADIIBmMmhYMUFpMqj",
+        "_score": 0.18232156,
+        "_source": {
+          "agent": {
+            "ip": "192.168.100.16",
+            "name": "sherry-dell",
+            "id": "001"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "audit": {
+              "syscall": "58",
+              "auid": "1000",
+              "gid": "0",
+              "euid": "0",
+              "fsgid": "0",
+              "session": "3",
+              "pid": "29915",
+              "suid": "0",
+              "type": "SYSCALL",
+              "command": "gcc",
+              "ppid": "2464",
+              "fsuid": "0",
+              "exit": "29918",
+              "uid": "0",
+              "egid": "0",
+              "exe": "/usr/bin/x86_64",
+              "success": "yes",
+              "tty": "pts1",
+              "sgid": "0",
+              "id": "1431",
+              "arch": "c000003e",
+              "key": "audit-wazuh-vfork"
+            }
+          },
+          "rule": {
+            "firedtimes": 2,
+            "mail": false,
+            "level": 3,
+            "description": "Audit: Command: /usr/bin/x86_64.",
+            "groups": [
+              "audit",
+              "audit_command"
+            ],
+            "id": "80792",
+            "gdpr": [
+              "IV_30.1.g"
+            ]
+          },
+          "decoder": {
+            "parent": "auditd",
+            "name": "auditd"
+          },
+          "full_log": "type=SYSCALL msg=audit(1658062935.252:1431): arch=c000003e syscall=58 success=yes exit=29918 a0=467563 a1=0 a2=0 a3=206e8d0 items=0 ppid=2464 pid=29915 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=3 comm=\"gcc\" exe=\"/usr/bin/x86_64-linux-gnu-gcc-7\" key=\"audit-wazuh-vfork\" type=PROCTITLE msg=audit(1658062935.252:1431): proctitle=67636300666F726B2E63002D6F00666F726B",
+          "input": {
+            "type": "log"
+          },
+          "@timestamp": "2022-07-17T13:02:16.582Z",
+          "location": "/var/log/audit/audit.log",
+          "id": "1658062936.16382",
+          "timestamp": "2022-07-17T13:02:16.582+0000"
+        }
+      },
+      {
+        "_index": "wazuh-alerts-4.x-2022.07.17",
+        "_type": "_doc",
+        "_id": "PUZADIIBmMmhYMUFpMqj",
+        "_score": 0.18232156,
+        "_source": {
+          "agent": {
+            "ip": "192.168.100.16",
+            "name": "sherry-dell",
+            "id": "001"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "audit": {
+              "syscall": "58",
+              "auid": "1000",
+              "gid": "0",
+              "euid": "0",
+              "fsgid": "0",
+              "session": "3",
+              "pid": "29915",
+              "suid": "0",
+              "type": "SYSCALL",
+              "command": "gcc",
+              "ppid": "2464",
+              "fsuid": "0",
+              "exit": "29917",
+              "uid": "0",
+              "egid": "0",
+              "exe": "/usr/bin/x86_64",
+              "success": "yes",
+              "tty": "pts1",
+              "sgid": "0",
+              "id": "1430",
+              "arch": "c000003e",
+              "key": "audit-wazuh-vfork"
+            }
+          },
+          "rule": {
+            "firedtimes": 3,
+            "mail": false,
+            "level": 3,
+            "description": "Audit: Command: /usr/bin/x86_64.",
+            "groups": [
+              "audit",
+              "audit_command"
+            ],
+            "id": "80792",
+            "gdpr": [
+              "IV_30.1.g"
+            ]
+          },
+          "decoder": {
+            "parent": "auditd",
+            "name": "auditd"
+          },
+          "full_log": "type=SYSCALL msg=audit(1658062935.228:1430): arch=c000003e syscall=58 success=yes exit=29917 a0=467563 a1=2 a2=0 a3=2061910 items=0 ppid=2464 pid=29915 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=3 comm=\"gcc\" exe=\"/usr/bin/x86_64-linux-gnu-gcc-7\" key=\"audit-wazuh-vfork\" type=PROCTITLE msg=audit(1658062935.228:1430): proctitle=67636300666F726B2E63002D6F00666F726B",
+          "input": {
+            "type": "log"
+          },
+          "@timestamp": "2022-07-17T13:02:16.582Z",
+          "location": "/var/log/audit/audit.log",
+          "id": "1658062936.17355",
+          "timestamp": "2022-07-17T13:02:16.582+0000"
+        }
+      }
+    ]
+  }
+}
